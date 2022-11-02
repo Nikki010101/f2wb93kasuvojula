@@ -2,4 +2,8 @@ extends layout
 
 block content
   h1= title
- 
+  - var results = [{"flavor": "vanilla", "price": 40, "shape": "round"}, {"flavor": "pineapple", "price": 30, "shape": "heart"}, {"flavor": "chocolate", "price": 50, "shape": "square"}]
+    div(class = 'container-fluid')
+        div(class = 'row')
+            each i in results 
+                div(class="col-sm-2") Flavor : #{i["flavor"]} <br> Price : #{i["price"]} <br> Shape: #{i["shape"]}
